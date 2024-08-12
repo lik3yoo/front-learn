@@ -1,0 +1,22 @@
+<html>
+
+<head>
+  <title>oncut 示例演示</title>
+
+  <script>
+    function log(txt) {
+      document.getElementById("log").appendChild(document.createTextNode(txt + "\n"));
+    }
+  </script>
+</head>
+
+<body>
+  <h3>按说明进行操作！</h3>
+  <textarea rows="3" cols="80" oncopy="log('复制成功！');" oncut="log('剪切被阻止！'); return false;">
+  尝试剪切和复制该文本域内的文本！
+</textarea>
+  <h3>Log</h3>
+  <textarea rows="15" cols="80" id="log" readonly="true"></textarea>
+</body>
+
+</html>

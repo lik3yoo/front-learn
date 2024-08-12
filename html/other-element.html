@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta
+			name="viewport"
+			content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+		>
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Document</title>
+	</head>
+	<body>
+		<!--
+				map
+				area
+				base : 定义页面上所有链接的相对地址
+				bdi ：双向隔离元素
+				col
+				colgroup
+				data
+				datalist
+				del : 删除文本
+				ins : 插入文本
+				details ：详细信息展示元素: 块元素
+				summery : 详细信息展示元素的标题
+				dialog
+				embed : 外部内容嵌入元素
+				label
+				meter : 现实一致范围的标量值
+				nav : 导航元素: 块元素
+				noscript
+				object : html嵌入对象元素
+				picture
+				source
+				progress: 进度指示元素
+				rp
+				rt
+				ruby
+				search : 包含搜索控件的元素
+				slot
+				sub
+				sup
+				template
+				track : 多媒体轨道, 指定视频或音频的字幕
+				wbr
+			-->
+		<img src="./assets/image/test.png" alt="" usemap="#testImg" style="width:400px; height: 300px">
+		<map name="testImg">
+			<area shape="rect" coords="0,0,150,400" href="https://www.baidu.com" alt="" target="_blank">
+		</map>
+		<bdi>bdi</bdi>
+
+		<input type="text" list="datalistId">
+		<datalist id="datalistId">
+			<option value="1">2</option>
+			<option value="2">2</option>
+		</datalist>
+
+		<del>del</del>
+		<ins>ins</ins>
+
+		<details>
+			<summery>summery</summery>
+			<p>details</p>
+		</details>
+
+		<dialog>
+			<p>dialog</p>
+		</dialog>
+
+
+		<embed type="video/quicktime" src="./assets/video/test.mp4" width="500" height="300">
+
+		<meter value="80" min="0" max="100" high="50" optimum="80"></meter>
+
+		<nav>
+			<ul>
+				<li>To one page</li>
+			</ul>
+		</nav>
+
+		<noscript>
+			This is no script tag
+		</noscript>
+
+		<object data="./assets/image/test.png" type=""></object>
+		<object data="./assets/video/test.mp4" type=""></object>
+
+		<progress value="70" max="100">
+			70%
+		</progress>
+
+		<search>
+			search
+		</search>
+		<span>span1</span>
+		<wbr>
+		<span>span2</span>
+	</body>
+</html>

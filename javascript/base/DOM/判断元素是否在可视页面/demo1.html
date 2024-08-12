@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    /* * {
+      margin: 0;
+      padding: 0;
+    } */
+    body {
+      height: 10000px;
+    }
+    .box {
+      margin-top: 1000px;
+      width: 100px;
+      height: 100px;
+      background: red;
+    }
+  </style>
+  <body>
+    <div class="box"></div>
+    <script>
+      const target = document.querySelector(".box");
+      const clientHeight = document.documentElement.clientHeight;
+      const targetHeight = target.offsetHeight;
+      const targetTop = target.offsetTop;
+      document.addEventListener("scroll", () => {
+        const scrollTop = document.documentElement.scrollTop;
+        console.log(targetTop, clientHeight, scrollTop, targetHeight);
+
+        if (targetTop > scrollTop + clientHeight) {
+          console.log("bottom");
+        } else if (targetTop < scrollTop - targetHeight) {
+          console.log("top");
+        } else {
+          console.log("in");
+        }
+      });
+    </script>
+  </body>
+</html>

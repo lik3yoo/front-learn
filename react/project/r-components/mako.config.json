@@ -1,0 +1,17 @@
+{
+	"target": {
+		"chrome": 40,
+    "ie": 11
+	},
+	"entry": {
+		"index": "./site/index.tsx"
+	},
+	"resolve": {
+		"alias": [
+			[
+				"@",
+				"./src"
+			]
+		]
+	}
+}

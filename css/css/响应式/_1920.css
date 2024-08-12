@@ -1,0 +1,8 @@
+.center {
+  flex: 2;
+}
+.left,
+.right {
+  flex: 1;
+  height: 100%;
+}

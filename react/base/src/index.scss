@@ -1,0 +1,43 @@
+// @import './assets/fonts/iconfont.css';
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #3f7ff7;
+}
+
+.app {
+  display: flex;
+
+  .menu {
+    width: 200px;
+    height: 100vh;
+    overflow-y: auto;
+    border-right: 1px solid #ccc;
+
+    .category {
+      padding: 5px 12px;
+      &-name {
+        color: #666;
+      }
+      .list {
+        padding-left: 20px;
+        a {
+          display: block;
+          padding: 2px 0;
+        }
+      }
+    }
+  }
+  .app_content {
+    flex: 1;
+    margin: 20px;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #eee;
+    border-radius: 4px;
+  }
+}

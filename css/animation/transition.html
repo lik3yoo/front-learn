@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<style>
+		.box {
+			width: 100px;
+			height: 100px;
+			background: red;
+			transition: all 1s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+			border-radius: 50%;
+		}
+	</style>
+	<div class="box"></div>
+	<script>
+		const box = document.querySelector('.box')
+		document.onclick = function (e) {
+			box.style.transform = `translate(${e.clientX - 50}px,${e.clientY - 50}px)`
+		}
+	</script>
+</body>
+
+</html>

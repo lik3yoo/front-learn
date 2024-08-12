@@ -1,0 +1,13 @@
+ul:nth-child(3n+1) {
+  background: #000;
+}
+
+ul:nth-child(3n+2) {
+  background: #000;
+}
+
+ul:nth-child(3n+3) {
+  background: #000;
+}
+
+/*# sourceMappingURL=for.css.map */

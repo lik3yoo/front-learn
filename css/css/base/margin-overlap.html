@@ -1,0 +1,45 @@
+<!-- 边距重叠 -->
+<!-- 只有垂直外边距会发生margin重叠 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .box1,
+  .line1 {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    border: 1px solid red;
+  }
+
+  .box2,
+  .line2 {
+    width: 100px;
+    height: 100px;
+    margin: 40px;
+    border: 1px solid red;
+  }
+  .inline{
+    margin-top: 200px;
+  }
+  span{
+    display: inline-block;
+  }
+</style>
+
+<body>
+  <div class="box1"></div>
+  <div class="box2"></div>
+  <div class="inline">
+    <span class="line1"></span>
+    <span class="line2"></span>
+  </div>
+</body>
+
+</html>

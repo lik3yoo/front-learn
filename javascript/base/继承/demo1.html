@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 原型链继承
+      function Person() {
+        this.hand = 2;
+        this.head = 1;
+      }
+      function YellowPerson(name) {
+        this.name = name;
+      }
+
+      YellowPerson.prototype = new Person();
+
+      const yPerson = new YellowPerson("小明");
+
+      console.log(yPerson);
+    </script>
+  </body>
+</html>

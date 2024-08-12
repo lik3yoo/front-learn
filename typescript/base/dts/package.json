@@ -1,0 +1,21 @@
+{
+  "name": "dts",
+  "version": "1.0.0",
+  "description": "用于测试将第三方库放入到项目中，给第三方库写声明文件",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-loader": "^9.5.1",
+    "webpack": "^5.92.1",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "typescript": "^5.5.3"
+  }
+}

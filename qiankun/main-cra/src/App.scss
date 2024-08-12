@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+.app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  > header {
+    height: 60px;
+    flex: none;
+    border-bottom: 1px solid #aaa;
+  }
+  > main {
+    flex: 1;
+    height: 0;
+  }
+}

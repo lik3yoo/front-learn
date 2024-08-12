@@ -1,0 +1,7 @@
+@mixin table-size($size) {
+  .table-th-item {
+    padding: var(--table-#{$size}-padding);
+  }
+}
+@include table-size("mid");
+

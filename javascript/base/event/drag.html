@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=jjj, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body {
+    user-select: none;
+  }
+
+  #draggable {
+    text-align: center;
+    background: white;
+  }
+
+  .dropzone {
+    width: 200px;
+    height: 20px;
+    background: blueviolet;
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .dropzone.dragover {
+    background-color: purple;
+  }
+
+  .dragging {
+    opacity: .5;
+  }
+</style>
+
+<body>
+  <div class="dropzone">
+    <div id="draggable" draggable="true">
+      这个 div 可以拖动
+    </div>
+  </div>
+  <div class="dropzone" id="droptarget"></div>
+
+</body>
+<script>
+  let dragged;
+
+  const source = document.getElementById("draggable");
+
+  // 拖动的元素处于拖动状态时触发
+  source.addEventListener("drag", (event) => {
+    console.log("dragging");
+  });
+
+  // 拖动的元素开始拖动时触发
+  source.addEventListener("dragstart", (event) => {
+    console.log('dragstart')
+    dragged = event.target;
+    event.target.classList.add("dragging");
+  });
+
+  // 拖动的元素结束拖动时触发
+  source.addEventListener("dragend", (event) => {
+    console.log('dragend')
+    event.target.classList.remove("dragging");
+  });
+
+  const target = document.getElementById("droptarget");
+
+  // 拖动的元素处在目标元素上方时触发
+  target.addEventListener("dragover", (event) => {
+    console.log("drop over")
+    event.preventDefault();
+  }, false);
+
+  // 拖动的元素进入目标元素时触发
+  target.addEventListener("dragenter", (event) => {
+    console.log("drop enter")
+    if (event.target.classList.contains("dropzone")) {
+      event.target.classList.add("dragover");
+    }
+  });
+
+  // 拖动的元素离开目标元素时触发
+  target.addEventListener("dragleave", (event) => {
+    console.log('drop leave')
+    if (event.target.classList.contains("dropzone")) {
+      event.target.classList.remove("dragover");
+    }
+  });
+
+  // 拖动的元素在目标元素上方释放鼠标时触发
+  target.addEventListener("drop", (event) => {
+    console.log('drop')
+    event.preventDefault();
+    if (event.target.classList.contains("dropzone")) {
+      event.target.classList.remove("dragover");
+      dragged.parentNode.removeChild(dragged);
+      event.target.appendChild(dragged);
+    }
+  });
+
+</script>
+
+</html>

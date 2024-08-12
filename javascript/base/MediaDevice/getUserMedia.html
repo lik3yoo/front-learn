@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      navigator.mediaDevices
+        .getUserMedia({ audio: true, video: true })
+        .then((stream) => {
+          const video = document.createElement("video");
+          video.srcObject = stream;
+          video.autoplay = true;
+          document.body.appendChild(video);
+          // 记录10s，并将其保存为mp4
+          const mediaRecorder = new MediaRecorder(stream);
+          const chunks = [];
+          mediaRecorder.ondataavailable = (e) => {
+            chunks.push(e.data);
+          };
+          mediaRecorder.onstop = (e) => {
+            const blob = new Blob(chunks, { type: "video/mp4" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "record.mp4";
+            a.click();
+            URL.revokeObjectURL(url);
+          };
+          setTimeout(() => {
+            mediaRecorder.stop();
+          }, 10000);
+          mediaRecorder.start();
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    </script>
+  </body>
+</html>

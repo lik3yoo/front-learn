@@ -1,0 +1,12 @@
+{
+    "id": "wfl-doctor-index",
+    "name": "医疗医生答诊-VUE模板 布局、样式、JS分离",
+    "version": "1.0.1",
+    "description": "医疗答诊-VUE模板 布局、样式、JS分离答诊-VUE模板 布局、样式、JS分离",
+    "keywords": [
+        "医疗",
+        "医生",
+        "VUE模板",
+        "UNIAPP模板"
+    ]
+}

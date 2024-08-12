@@ -1,0 +1,1 @@
+# 测试一下webpack中output.library.type打包不同规范

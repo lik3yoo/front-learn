@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      height: 10000px;
+    }
+    .box {
+      margin-top: 1000px;
+      width: 100px;
+      height: 100px;
+
+      background: red;
+    }
+  </style>
+  <body>
+    <div class="box"></div>
+    <script>
+      let box = document.querySelector(".box");
+      const clientHeight = document.documentElement.clientHeight;
+
+      document.addEventListener("scroll", () => {
+        const client = box.getBoundingClientRect();
+        const { bottom, y } = client;
+        // console.log(bottom, y);
+        if (bottom < 0) {
+          console.log("top");
+        } else if (y > clientHeight) {
+          console.log("bottom");
+        } else {
+          console.log("in");
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: greenyellow;
+}
+
+.home {
+  width: 192rem;
+  height: 108rem;
+  background-color: #ccc;
+}
+.home header {
+  width: 100%;
+  height: 10rem;
+  background-color: skyblue;
+}
+.home main {
+  width: 100%;
+  height: 98rem;
+  background-color: #ddd;
+  display: flex;
+}
+.home main .left {
+  width: 20%;
+  height: 100%;
+  background-color: #eee;
+}
+.home main .center {
+  width: 60%;
+  height: 100%;
+  background-color: #aaa;
+}
+.home main .right {
+  width: 20%;
+  height: 100%;
+  background-color: #bbb;
+}

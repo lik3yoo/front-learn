@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "esModuleInterop":true,
+    "typeRoots": [
+      "./types"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "echarts": [
+        "lib/echarts.js"
+      ],
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "types/**/*"
+  ],
+}

@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+div {
+  text-align: center;
+}
+.wrap {
+  width: 100%;
+  height: 100%;
+  background: skyblue;
+  transform-origin: 0 0;
+}
+.header {
+  background: #aaa;
+  height: 60px;
+}
+.left,
+.right {
+  background: #ccc;
+}
+.footer {
+  height: 20px;
+  background: #000;
+  color: #fff;
+}
+.main {
+  display: flex;
+  align-items: center;
+  height: calc(100% - 80px);
+}
